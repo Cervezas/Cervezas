@@ -1,10 +1,11 @@
-﻿@model Site
+﻿@using Cervezas.Helpers
+@model Site
 
 @{
     ViewBag.Title = Model.Name;
 }
 
-<h2>@Model.Name</h2>
+<h2>@Html.Favicon(Model, 32, 32) @Model.Name</h2>
 
 <h4>Surveys</h4>
 @Html.Action(MVC.Surveys.Index(Model.Id))

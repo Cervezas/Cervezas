@@ -18,6 +18,14 @@ namespace Cervezas.Models
         [DisplayName("Domain Name")]
         public string DomainName { get; set; }
 
-        public virtual List<Survey> Surveys { get; set; } 
+        public virtual List<Survey> Surveys { get; set; }
+
+        public string FaviconUrl
+        {
+            get
+            {
+                return "http://g.etfv.co/http://" + DomainName;
+            }
+        }
     }
 }
