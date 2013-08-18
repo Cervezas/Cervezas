@@ -141,6 +141,10 @@
     <Compile Include="HomeController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201308180503033_Add_Sites.cs" />
+    <Compile Include="Migrations\201308180503033_Add_Sites.Designer.cs">
+      <DependentUpon>201308180503033_Add_Sites.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Db.cs" />
     <Compile Include="Models\Site.cs" />
@@ -245,6 +249,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201308180503033_Add_Sites.resx">
+      <DependentUpon>201308180503033_Add_Sites.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
