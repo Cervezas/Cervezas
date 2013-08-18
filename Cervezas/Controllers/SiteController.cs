@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
+using AttributeRouting.Web.Mvc;
 using Cervezas.Models;
 
 namespace Cervezas.Controllers
@@ -13,6 +14,7 @@ namespace Cervezas.Controllers
             _db = db;
         }
 
+        [Route("sites")]
         public virtual ActionResult Index()
         {
             var sites = _db.Sites.ToList();
