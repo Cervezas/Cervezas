@@ -280,6 +280,7 @@
     <Content Include="Views\Surveys\Index.cshtml" />
     <Content Include="Views\Surveys\Add.cshtml" />
     <Content Include="Views\Shared\_MINIPROFILER UPDATED Layout.cshtml" />
+    <Content Include="Views\Surveys\Show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

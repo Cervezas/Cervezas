@@ -44,5 +44,18 @@ namespace Cervezas.Controllers
 
             return RedirectToAction(MVC.Sites.Show(siteId));
         }
+
+        [Route("surveys/{surveyId:int}")]
+        public virtual ActionResult Show(int siteId, int surveyId)
+        {
+            var survey = _db.Surveys.Find(surveyId);
+
+            if (survey == null)
+            {
+                return new HttpNotFoundResult();
+            }
+
+            return View(survey);
+        }
     }
 }

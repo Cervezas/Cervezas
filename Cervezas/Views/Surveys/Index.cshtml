@@ -10,7 +10,9 @@
         @foreach (var survey in Model)
         {
             <tr>
-                <td>@survey.Title</td>
+                <td>
+                    @Html.ActionLink(survey.Title, MVC.Surveys.Show(survey.SiteId, survey.Id))
+                </td>
             </tr>
         }
         <tr>
