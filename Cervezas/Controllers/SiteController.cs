@@ -39,5 +39,18 @@ namespace Cervezas.Controllers
             _db.SaveChanges();
             return RedirectToAction(MVC.Sites.Index());
         }
+
+        [Route("sites/{siteId:int}")]
+        public virtual ActionResult Show(int siteId)
+        {
+            var site = _db.Sites.Find(siteId);
+
+            if (site == null)
+            {
+                return new HttpNotFoundResult();
+            }
+
+            return View(site);
+        }
     }
 }

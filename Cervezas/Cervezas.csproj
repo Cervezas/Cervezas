@@ -250,6 +250,7 @@
     </Content>
     <Content Include="Views\Sites\Index.cshtml" />
     <Content Include="Views\Sites\AddASite.cshtml" />
+    <Content Include="Views\Sites\Show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
