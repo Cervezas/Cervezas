@@ -263,7 +263,7 @@
       <LastGenOutput>T4MVC.cs</LastGenOutput>
     </Content>
     <Content Include="Views\Sites\Index.cshtml" />
-    <Content Include="Views\Sites\AddASite.cshtml" />
+    <Content Include="Views\Sites\Add.cshtml" />
     <Content Include="Views\Sites\Show.cshtml" />
     <Content Include="Views\Surveys\Index.cshtml" />
   </ItemGroup>

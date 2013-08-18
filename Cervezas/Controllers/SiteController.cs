@@ -20,15 +20,15 @@ namespace Cervezas.Controllers
             return View(sites);
         }
 
-        [Route("sites/add-a-site")]
+        [Route("sites/add")]
         [HttpGet]
-        public virtual ActionResult AddASite()
+        public virtual ActionResult Add()
         {
             return View();
         }
 
         [HttpPost]
-        public virtual ActionResult AddASite(Site site)
+        public virtual ActionResult Add(Site site)
         {
             if (!ModelState.IsValid)
             {

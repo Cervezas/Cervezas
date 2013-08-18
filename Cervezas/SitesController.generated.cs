@@ -64,7 +64,7 @@ namespace Cervezas.Controllers
         public class ActionNamesClass
         {
             public readonly string Index = "Index";
-            public readonly string AddASite = "AddASite";
+            public readonly string Add = "Add";
             public readonly string Show = "Show";
         }
 
@@ -72,16 +72,16 @@ namespace Cervezas.Controllers
         public class ActionNameConstants
         {
             public const string Index = "Index";
-            public const string AddASite = "AddASite";
+            public const string Add = "Add";
             public const string Show = "Show";
         }
 
 
-        static readonly ActionParamsClass_AddASite s_params_AddASite = new ActionParamsClass_AddASite();
+        static readonly ActionParamsClass_Add s_params_Add = new ActionParamsClass_Add();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public ActionParamsClass_AddASite AddASiteParams { get { return s_params_AddASite; } }
+        public ActionParamsClass_Add AddParams { get { return s_params_Add; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public class ActionParamsClass_AddASite
+        public class ActionParamsClass_Add
         {
             public readonly string site = "site";
         }
@@ -103,11 +103,11 @@ namespace Cervezas.Controllers
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
-                public readonly string AddASite = "AddASite";
+                public readonly string Add = "Add";
                 public readonly string Index = "Index";
                 public readonly string Show = "Show";
             }
-            public readonly string AddASite = "~/Views/Sites/AddASite.cshtml";
+            public readonly string Add = "~/Views/Sites/Add.cshtml";
             public readonly string Index = "~/Views/Sites/Index.cshtml";
             public readonly string Show = "~/Views/Sites/Show.cshtml";
         }
@@ -127,22 +127,22 @@ namespace Cervezas.Controllers
             return callInfo;
         }
 
-        partial void AddASiteOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+        partial void AddOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
-        public override System.Web.Mvc.ActionResult AddASite()
+        public override System.Web.Mvc.ActionResult Add()
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.AddASite);
-            AddASiteOverride(callInfo);
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Add);
+            AddOverride(callInfo);
             return callInfo;
         }
 
-        partial void AddASiteOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Cervezas.Models.Site site);
+        partial void AddOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Cervezas.Models.Site site);
 
-        public override System.Web.Mvc.ActionResult AddASite(Cervezas.Models.Site site)
+        public override System.Web.Mvc.ActionResult Add(Cervezas.Models.Site site)
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.AddASite);
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Add);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "site", site);
-            AddASiteOverride(callInfo, site);
+            AddOverride(callInfo, site);
             return callInfo;
         }
 
