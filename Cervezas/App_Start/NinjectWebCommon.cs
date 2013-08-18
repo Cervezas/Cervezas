@@ -1,3 +1,5 @@
+using Cervezas.Models;
+
 [assembly: WebActivator.PreApplicationStartMethod(typeof(Cervezas.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivator.ApplicationShutdownMethodAttribute(typeof(Cervezas.App_Start.NinjectWebCommon), "Stop")]
 
@@ -53,6 +55,7 @@ namespace Cervezas.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-        }        
+            kernel.Bind<Db>().To<Db>().InRequestScope();
+        }
     }
 }
