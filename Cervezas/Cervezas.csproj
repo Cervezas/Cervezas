@@ -266,6 +266,7 @@
     <Content Include="Views\Sites\Add.cshtml" />
     <Content Include="Views\Sites\Show.cshtml" />
     <Content Include="Views\Surveys\Index.cshtml" />
+    <Content Include="Views\Surveys\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

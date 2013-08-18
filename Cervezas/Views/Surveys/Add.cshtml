@@ -1,0 +1,13 @@
+﻿@model Survey
+
+@{
+    ViewBag.Title = "Add a Survey";
+}
+
+<h2>Add a Survey</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <input type="submit" value="add survey" />
+}

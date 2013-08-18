@@ -1,5 +1,4 @@
-﻿@using System.Activities.Statements
-@model List<Survey>
+﻿@model List<Survey>
 
 <table class="table table-striped">
     <thead>
@@ -20,7 +19,8 @@
                     @if (!Model.Any())
                     {
                         @:There are no surveys.
-                    }    
+                    }
+                    @Html.ActionLink("add a survey", MVC.Surveys.Add(), new { @class="btn btn-primary btn-small"})
                 </div>
             </td>
         </tr>

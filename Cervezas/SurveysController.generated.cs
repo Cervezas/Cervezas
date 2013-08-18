@@ -47,6 +47,12 @@ namespace Cervezas.Controllers
         {
             return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
         }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult Add()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Add);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public SurveysController Actions { get { return MVC.Surveys; } }
@@ -64,12 +70,14 @@ namespace Cervezas.Controllers
         public class ActionNamesClass
         {
             public readonly string Index = "Index";
+            public readonly string Add = "Add";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
             public const string Index = "Index";
+            public const string Add = "Add";
         }
 
 
@@ -81,6 +89,15 @@ namespace Cervezas.Controllers
         {
             public readonly string siteId = "siteId";
         }
+        static readonly ActionParamsClass_Add s_params_Add = new ActionParamsClass_Add();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_Add AddParams { get { return s_params_Add; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_Add
+        {
+            public readonly string siteId = "siteId";
+            public readonly string survey = "survey";
+        }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ViewsClass Views { get { return s_views; } }
@@ -91,8 +108,10 @@ namespace Cervezas.Controllers
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
+                public readonly string Add = "Add";
                 public readonly string Index = "Index";
             }
+            public readonly string Add = "~/Views/Surveys/Add.cshtml";
             public readonly string Index = "~/Views/Surveys/Index.cshtml";
         }
     }
@@ -109,6 +128,27 @@ namespace Cervezas.Controllers
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "siteId", siteId);
             IndexOverride(callInfo, siteId);
+            return callInfo;
+        }
+
+        partial void AddOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, int siteId);
+
+        public override System.Web.Mvc.ActionResult Add(int siteId)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Add);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "siteId", siteId);
+            AddOverride(callInfo, siteId);
+            return callInfo;
+        }
+
+        partial void AddOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, int siteId, Cervezas.Models.Survey survey);
+
+        public override System.Web.Mvc.ActionResult Add(int siteId, Cervezas.Models.Survey survey)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Add);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "siteId", siteId);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "survey", survey);
+            AddOverride(callInfo, siteId, survey);
             return callInfo;
         }
 

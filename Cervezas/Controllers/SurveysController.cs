@@ -22,5 +22,27 @@ namespace Cervezas.Controllers
             var surveys = _db.Surveys.Where(o => o.SiteId == siteId).ToList();
             return PartialView(surveys);
         }
+
+        [Route("surveys/add")]
+        [HttpGet]
+        public virtual ActionResult Add(int siteId)
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public virtual ActionResult Add(int siteId, Survey survey)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            var site = _db.Sites.Find(siteId);
+            site.Surveys.Add(survey);
+            _db.SaveChanges();
+
+            return RedirectToAction(MVC.Sites.Show(siteId));
+        }
     }
 }

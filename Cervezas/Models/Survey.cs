@@ -7,6 +7,7 @@ namespace Cervezas.Models
         [ScaffoldColumn(false)]
         public int Id { get; set; }
 
+        [ScaffoldColumn(false)]
         public int SiteId { get; set; }
         public virtual Site Site { get; set; }
 
