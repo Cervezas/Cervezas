@@ -19,11 +19,17 @@
                 <td>@site.DomainName</td>
             </tr>
         }
-        @if (!Model.Any())
-        {
+        
             <tr>
-                <td>There are no sites.</td>
+                <td>
+                    <div class="text-center">
+                        @if (!Model.Any())
+                        {
+                            @:There are no sites.
+                        } 
+                        @Html.ActionLink("add a site", MVC.Sites.AddASite(), new { @class = "btn btn-primary btn-small" })
+                    </div>
+                </td>
             </tr>
-        }
     </tbody>
 </table>

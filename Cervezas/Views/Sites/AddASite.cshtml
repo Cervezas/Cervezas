@@ -1,0 +1,13 @@
+﻿@model Site
+
+@{
+    ViewBag.Title = "add a site";
+}
+
+<h2>add a site</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.EditorForModel();
+    <input type="submit" value="add site" />
+}

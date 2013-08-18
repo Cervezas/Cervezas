@@ -22,10 +22,10 @@ using System.Web.Routing;
 using T4MVC;
 namespace Cervezas.Controllers
 {
-    public partial class SiteController
+    public partial class SitesController
     {
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        protected SiteController(Dummy d) { }
+        protected SitesController(Dummy d) { }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         protected RedirectToRouteResult RedirectToAction(ActionResult result)
@@ -43,13 +43,13 @@ namespace Cervezas.Controllers
 
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public SiteController Actions { get { return MVC.Site; } }
+        public SitesController Actions { get { return MVC.Sites; } }
         [GeneratedCode("T4MVC", "2.0")]
         public readonly string Area = "";
         [GeneratedCode("T4MVC", "2.0")]
-        public readonly string Name = "Site";
+        public readonly string Name = "Sites";
         [GeneratedCode("T4MVC", "2.0")]
-        public const string NameConst = "Site";
+        public const string NameConst = "Sites";
 
         static readonly ActionNamesClass s_actions = new ActionNamesClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -58,15 +58,25 @@ namespace Cervezas.Controllers
         public class ActionNamesClass
         {
             public readonly string Index = "Index";
+            public readonly string AddASite = "AddASite";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
             public const string Index = "Index";
+            public const string AddASite = "AddASite";
         }
 
 
+        static readonly ActionParamsClass_AddASite s_params_AddASite = new ActionParamsClass_AddASite();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_AddASite AddASiteParams { get { return s_params_AddASite; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_AddASite
+        {
+            public readonly string site = "site";
+        }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ViewsClass Views { get { return s_views; } }
@@ -77,16 +87,18 @@ namespace Cervezas.Controllers
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
+                public readonly string AddASite = "AddASite";
                 public readonly string Index = "Index";
             }
-            public readonly string Index = "~/Views/Site/Index.cshtml";
+            public readonly string AddASite = "~/Views/Sites/AddASite.cshtml";
+            public readonly string Index = "~/Views/Sites/Index.cshtml";
         }
     }
 
     [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-    public partial class T4MVC_SiteController : Cervezas.Controllers.SiteController
+    public partial class T4MVC_SitesController : Cervezas.Controllers.SitesController
     {
-        public T4MVC_SiteController() : base(Dummy.Instance) { }
+        public T4MVC_SitesController() : base(Dummy.Instance) { }
 
         partial void IndexOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
@@ -94,6 +106,25 @@ namespace Cervezas.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
             IndexOverride(callInfo);
+            return callInfo;
+        }
+
+        partial void AddASiteOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        public override System.Web.Mvc.ActionResult AddASite()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.AddASite);
+            AddASiteOverride(callInfo);
+            return callInfo;
+        }
+
+        partial void AddASiteOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, Cervezas.Models.Site site);
+
+        public override System.Web.Mvc.ActionResult AddASite(Cervezas.Models.Site site)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.AddASite);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "site", site);
+            AddASiteOverride(callInfo, site);
             return callInfo;
         }
 

@@ -25,7 +25,7 @@ using T4MVC;
 public static class MVC
 {
     public static Cervezas.Controllers.HomeController Home = new Cervezas.Controllers.T4MVC_HomeController();
-    public static Cervezas.Controllers.SiteController Site = new Cervezas.Controllers.T4MVC_SiteController();
+    public static Cervezas.Controllers.SitesController Sites = new Cervezas.Controllers.T4MVC_SitesController();
 }
 
 namespace T4MVC
