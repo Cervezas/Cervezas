@@ -11,7 +11,7 @@
         <div class="navbar navbar-fixed-top navbar-inverse">
             <div class="navbar-inner">
                 <div class="container">
-                    <a class="brand">Cervezas</a>
+                    @Html.ActionLink("Cervezas", MVC.Home.Index(), new { @class = "brand"})
                     <ul class="nav">
                         <li>@Html.ActionLink("Sites", MVC.Sites.Index())</li>
                     </ul>
