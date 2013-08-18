@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Cervezas.Models
@@ -16,5 +17,7 @@ namespace Cervezas.Models
         [Required]
         [DisplayName("Domain Name")]
         public string DomainName { get; set; }
+
+        public virtual List<Survey> Surveys { get; set; } 
     }
 }
