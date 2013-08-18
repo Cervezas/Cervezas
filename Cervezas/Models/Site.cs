@@ -20,6 +20,7 @@ namespace Cervezas.Models
 
         public virtual List<Survey> Surveys { get; set; }
 
+        [ScaffoldColumn(false)]
         public string FaviconUrl
         {
             get
