@@ -116,6 +116,7 @@ internal partial class T4MVC_<#=resultType.UniqueName #> : <#=resultType.FullNam
     public T4MVC_<#=resultType.UniqueName #>(string area, string controller, string action, string protocol = null): base(<#resultType.Constructor.WriteNonEmptyParameterValues(true); #>)
     {
         this.InitMVCT4Result(area, controller, action, protocol);
+		this.RouteValueDictionary.Remove("Area");
     }
     <#foreach (var method in resultType.AbstractMethods) { #> 
     <#=method.IsPublic ? "public" : "protected" #> override <#=method.ReturnType#> <#=method.Name #>(<#method.WriteFormalParameters(true); #>) {<# if(method.ReturnType != "void") {#> return default(<#=method.ReturnType#>); <#} #> }

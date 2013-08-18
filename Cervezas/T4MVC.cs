@@ -48,6 +48,7 @@ internal partial class T4MVC_System_Web_Mvc_ActionResult : System.Web.Mvc.Action
     public T4MVC_System_Web_Mvc_ActionResult(string area, string controller, string action, string protocol = null): base()
     {
         this.InitMVCT4Result(area, controller, action, protocol);
+		this.RouteValueDictionary.Remove("Area");
     }
      
     public override void ExecuteResult(System.Web.Mvc.ControllerContext context) { }
