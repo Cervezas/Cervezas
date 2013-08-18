@@ -16,7 +16,7 @@
         @foreach (var site in Model)
         {
             <tr>
-                <td>@Html.ActionLink(site.DomainName, MVC.Sites.Show(site.Id), new { @class = "site-link"})</td>
+                <td>@Html.ActionLink(site.Name, MVC.Sites.Show(site.Id), new { @class = "site-link"})</td>
             </tr>
         }
         

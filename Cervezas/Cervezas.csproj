@@ -159,6 +159,10 @@
     <Compile Include="Migrations\201308180503033_Add_Sites.Designer.cs">
       <DependentUpon>201308180503033_Add_Sites.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201308180610006_Add_Name_To_Sites.cs" />
+    <Compile Include="Migrations\201308180610006_Add_Name_To_Sites.Designer.cs">
+      <DependentUpon>201308180610006_Add_Name_To_Sites.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Db.cs" />
     <Compile Include="Models\Site.cs" />
@@ -273,6 +277,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201308180503033_Add_Sites.resx">
       <DependentUpon>201308180503033_Add_Sites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201308180610006_Add_Name_To_Sites.resx">
+      <DependentUpon>201308180610006_Add_Name_To_Sites.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
