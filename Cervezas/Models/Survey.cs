@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Cervezas.Models
 {
@@ -14,5 +15,7 @@ namespace Cervezas.Models
         [Required]
         [MaxLength(256)]
         public string Title { get; set; }
+
+        public virtual List<Question> Questions { get; set; } 
     }
 }

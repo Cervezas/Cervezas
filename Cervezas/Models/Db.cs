@@ -6,5 +6,6 @@ namespace Cervezas.Models
     {
         public IDbSet<Site> Sites { get; set; } 
         public IDbSet<Survey> Surveys { get; set; } 
+        public IDbSet<Question> Questions { get; set; } 
     }
 }

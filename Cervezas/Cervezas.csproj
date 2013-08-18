@@ -178,8 +178,13 @@
     <Compile Include="Migrations\201308180617332_Add_Surveys.Designer.cs">
       <DependentUpon>201308180617332_Add_Surveys.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201308180719032_Add_Questions.cs" />
+    <Compile Include="Migrations\201308180719032_Add_Questions.Designer.cs">
+      <DependentUpon>201308180719032_Add_Questions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Db.cs" />
+    <Compile Include="Models\Question.cs" />
     <Compile Include="Models\Site.cs" />
     <Compile Include="Models\Survey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -309,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201308180617332_Add_Surveys.resx">
       <DependentUpon>201308180617332_Add_Surveys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201308180719032_Add_Questions.resx">
+      <DependentUpon>201308180719032_Add_Questions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
