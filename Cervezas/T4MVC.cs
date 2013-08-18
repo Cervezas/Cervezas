@@ -27,6 +27,7 @@ public static class MVC
     public static Cervezas.Controllers.HomeController Home = new Cervezas.Controllers.T4MVC_HomeController();
     public static Cervezas.Controllers.SitesController Sites = new Cervezas.Controllers.T4MVC_SitesController();
     public static Cervezas.Controllers.SurveysController Surveys = new Cervezas.Controllers.T4MVC_SurveysController();
+    public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }
 
 namespace T4MVC

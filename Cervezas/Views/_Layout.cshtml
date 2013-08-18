@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using StackExchange.Profiling
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -20,5 +21,6 @@
         </div>
         @RenderBody()
     </div>
+    @MiniProfiler.RenderIncludes()
 </body>
 </html>
