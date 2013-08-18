@@ -1,0 +1,28 @@
+﻿@using System.Activities.Statements
+@model List<Survey>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var survey in Model)
+        {
+            <tr>
+                <td>@survey.Title</td>
+            </tr>
+        }
+        <tr>
+            <td>
+                <div class="text-center">
+                    @if (!Model.Any())
+                    {
+                        @:There are no surveys.
+                    }    
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

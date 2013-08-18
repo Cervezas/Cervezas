@@ -149,6 +149,7 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SiteController.cs" />
+    <Compile Include="Controllers\SurveysController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -163,12 +164,19 @@
     <Compile Include="Migrations\201308180610006_Add_Name_To_Sites.Designer.cs">
       <DependentUpon>201308180610006_Add_Name_To_Sites.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201308180617332_Add_Surveys.cs" />
+    <Compile Include="Migrations\201308180617332_Add_Surveys.Designer.cs">
+      <DependentUpon>201308180617332_Add_Surveys.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Db.cs" />
     <Compile Include="Models\Site.cs" />
     <Compile Include="Models\Survey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SitesController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SurveysController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="T4MVC.cs">
@@ -256,6 +264,7 @@
     <Content Include="Views\Sites\Index.cshtml" />
     <Content Include="Views\Sites\AddASite.cshtml" />
     <Content Include="Views\Sites\Show.cshtml" />
+    <Content Include="Views\Surveys\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -281,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201308180610006_Add_Name_To_Sites.resx">
       <DependentUpon>201308180610006_Add_Name_To_Sites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201308180617332_Add_Surveys.resx">
+      <DependentUpon>201308180617332_Add_Surveys.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
