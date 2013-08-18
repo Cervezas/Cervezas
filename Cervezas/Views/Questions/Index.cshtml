@@ -1,0 +1,16 @@
+﻿@model List<Question>
+
+@if (!Model.Any())
+{
+    @:There are no questions on this survey.
+}
+
+@Html.ActionLink("add a question", MVC.Questions.Add(), new { @class = "btn btn-primary btn-small" })
+
+@foreach (var question in Model)
+{
+    <div class="question">
+        <div class="order">@question.DisplayOrder</div>
+        <div class="text">@question.Text</div>
+    </div>
+}
